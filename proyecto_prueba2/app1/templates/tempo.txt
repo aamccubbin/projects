@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block titulo %}  Lista de Alumnos  {% endblock %}
+
+{% block contenido %}
+  
+<section>
+  	<h2>{{detalle}}</h2>
+  	
+  	<table border="1">
+  		<thead>
+  			<tr>
+  				<th>Id.</th>
+  				<th>Nombre</th>
+  				<th>Apellidos</th>
+  				<th>Nif</th>
+  			</tr>
+  		</thead>
+  		
+  		<tbody>
+  			{% for a in alumnos %}
+  				<tr>	
+  					<td>{{ a.id }}</td>
+  					<td>{{ a.nombre }}</td>
+  					<td>{{ a.apellidos }}</td>
+  					<td>{{ a.nif }}</td>
+  				</tr>
+  			{% endfor %}
+  		
+  		</tbody>
+  	</table>
+  	
+  	
+</section>
+	
+  
+{% endblock %}
+
+
+

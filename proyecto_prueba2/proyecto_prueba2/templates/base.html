@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html> 
+<head>
+  <meta charset="utf-8" />
+  
+  <title> {% block titulo %}  {% endblock %} </title>
+  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/base.css" />
+  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/menu.css" />
+  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/jquery-ui.css" />
+
+  <script type="text/javascript" src="{{STATIC_URL}}js/base.js" ></script>
+  <script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.12.3.min.js" ></script>
+  <script type="text/javascript" src="{{STATIC_URL}}js/jquery-ui.js" ></script>
+ 
+</head>
+
+<body> 
+
+<div id="contenedor">
+  <header>
+  	<div class="cabecera">
+  	  <div style="float:left;">
+		<h5>¡¡Visitanos!!</h5>
+	  </div>
+	   <img id="logo" src="{{STATIC_URL}}img/logon_g.gif"  />
+	   <div id="area">Área de administración</div>
+	   <div id="redSoc"> </div>
+	</div>
+  </header>
+  
+  <nav>
+     <div id="menu">
+    	<ul>
+    		<li><a href="/inicio" >Inicio</a></li>
+    		<li class="nivel1"><a href="#" >PARTE-1</a>
+    			<ul>
+    				<li><a href="/alumno_lista" >Lista de alumnos</a></li>
+    				<li><a href="#" >PARTE-1.2</a></li>
+    			</ul>
+    		</li>
+    		<li class="nivel1"><a href="#" >PARTE-2</a>
+    			<ul>
+    				<li><a href="#" >PARTE-2.1</a></li>
+    				<li><a href="#" >PARTE-2.2</a></li>
+    			</ul>
+    		</li>
+    		<li class="nivel1"><a href="#" >PARTE-3</a></li>
+    	</ul>
+    	
+    </div>
+  </nav>
+
+ {% block contenido %}  
+
+
+     
+{% endblock %}
+     
+
+	<div id="dialog" title="Aviso sistema" style="display:none; ">
+		<p id="pgta"></p>
+	</div>
+
+	<footer>
+	  <div id="grupo">Pagina de prueba-1</div>
+	  <div id="contacto">
+	  	Email: prueba1@gmail.com &nbsp; Teléfono: 91-4589625  
+	  </div>
+	</footer>
+</div>
+
+   
+</body>
+</html>
