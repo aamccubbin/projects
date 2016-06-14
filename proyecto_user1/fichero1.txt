@@ -1,2 +1,5 @@
 fichero1 del proyecto_user1
 Esta linea la estoy escribiendo desde el repositorio
+
+Esta linea la escribo desde la terminal de ubuntu
+
